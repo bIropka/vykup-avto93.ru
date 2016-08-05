@@ -30,7 +30,7 @@
 }
 
 /******************************
-********** general *************
+********** general ************
 ******************************/
 * {
     padding: 0;
@@ -120,11 +120,11 @@ img {
     border: 1px solid #f76d2c;
 }
 .button-orange:hover {
-    background-color: transparent;
+    background-color: #ffffff;
     color: #f76d2c;
 }
 .button-orange:active, .button-orange:focus {
-    background-color: transparent;
+    background-color: #ffffff;
     border: 1px solid #cd3e11;
     color: #cd3e11;
 }
@@ -143,6 +143,27 @@ h3 {
 }
 h4 {
 
+}
+
+.form-field::-webkit-input-placeholder {
+    font-family: 'Roboto Regular', sans-serif;
+    color: #666666;
+    opacity: 1;
+}
+.form-field::-moz-placeholder {
+    font-family: 'Roboto Regular', sans-serif;
+    color: #666666;
+    opacity: 1;
+}
+.form-field:-moz-placeholder {
+    font-family: 'Roboto Regular', sans-serif;
+    color: #666666;
+    opacity: 1;
+}
+.form-field:-ms-input-placeholder {
+    font-family: 'Roboto Regular', sans-serif;
+    color: #666666;
+    opacity: 1;
 }
 
 .form-field:focus::-webkit-input-placeholder {color: transparent;}
@@ -323,5 +344,156 @@ nav ul .active:before {
 .form-order {
     background-color: rgba(255, 255, 255, 0.4);
     border-bottom: 1px solid #f76d2c;
-    padding: 28px;
+    padding: 2.5%;
+    position: relative;
+}
+.form-order .form-field-wrap {
+    display: block;
+    width: 24.25%;
+    height: 36px;
+    margin-right: 1%;
+    margin-bottom: 10px;
+    float: left;
+}
+.form-order .form-field-wrap:nth-child(4) {
+    margin-right: 0;
+}
+.form-order .form-field {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+    padding-left: 15px;
+}
+.form-order .form-textarea-wrap {
+    width: 49.5%;
+    height: 82px;
+    margin-bottom: 0;
+}
+.form-order .form-textarea {
+    padding-top: 10px;
+}
+.form-order .radio-wrap {
+    display: block;
+    float: left;
+    width: 11.625%;
+    height: 36px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    font-family: 'Roboto Regular', sans-serif;
+    color: #6c6c6c;
+    line-height: 36px;
+    margin-right: 1%;
+    position: relative;
+    padding-left: 35px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+.form-order .radio-wrap:before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #bdbdbd;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background: #ffffff;
+    margin: auto;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+}
+.form-order .form-radio:checked + .radio-wrap {
+    background-color: #f76d2c;
+    color: #ffffff;
+}
+.form-order .form-radio:checked + .radio-wrap:before {
+    background: #ffffff url('../images/icon-ok-orange.png') no-repeat center;
+    border: 1px solid transparent;
+}
+.form-order .form-submit-wrap {
+    display: block;
+    width: 24.25%;
+    height: 82px;
+    float: left;
+}
+.form-order .form-submit-wrap p {
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 12px;
+    color: #ff702c;
+    line-height: 27px;
+}
+.form-order .form-submit-wrap .form-submit {
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    font-family: 'Roboto Medium', sans-serif;
+    line-height: 50px;
+}
+.form-order .custom-select {
+    display: block;
+    width: 11%;
+    height: 36px;
+    margin-right: 1%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 2.5%;
+    bottom: 15%;
+}
+.form-order .kpp-chooser {
+    left: 14.5%;
+}
+.form-order .custom-select .current-value {
+    width: 100%;
+    height: 100%;
+    line-height: 36px;
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 14px;
+    color: #6c6c6c;
+    text-align: left;
+    padding-left: 15px;
+    cursor: pointer;
+    position: relative;
+}
+.form-order .custom-select .current-value:before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 5px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: transparent url('../images/sprite-arrows.png') no-repeat left center;
+    background-size: cover;
+}
+.form-order .custom-select .current-value.active:before {
+    background-position: right center;
+}
+.form-order .custom-select ul {
+    display: none;
+    background-color: #ffffff;
+    position: absolute;
+    right: 0;
+    top: 36px;
+    z-index: 1;
+    padding: 5px 15px;
+}
+.form-order .custom-select ul li {
+    display: block;
+    cursor: pointer;
+    margin: 3px 0;
+}
+.form-order .custom-select ul li:hover {
+    color: #f76d2c;
+}
+
+/******************************
+********** footer *************
+******************************/
+.footer-bottom {
+    background-color: #161616;
 }
