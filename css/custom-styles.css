@@ -28,6 +28,12 @@
     font-weight: 300;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Roboto Black';
+    src: url("../fonts/Roboto-Black.woff") format("woff"), url("../fonts/Roboto-Black.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
 
 /******************************
 ********** general ************
@@ -133,16 +139,6 @@ body {
     width: 100%;
     background: #ffffff url('../images/background-top.jpg') no-repeat left top;
     background-size: 100% auto;
-}
-
-h2 {
-
-}
-h3 {
-
-}
-h4 {
-
 }
 
 .form-field::-webkit-input-placeholder {
@@ -361,7 +357,7 @@ nav ul .active:before {
 .form-order .form-field-wrap:nth-child(4) {
     margin-right: 0;
 }
-.form-order .form-field {
+.form-field {
     width: 100%;
     height: 100%;
     border: 1px solid #e0e0e0;
@@ -375,7 +371,7 @@ nav ul .active:before {
 .form-order .form-textarea {
     padding-top: 10px;
 }
-.form-order .radio-wrap {
+.radio-wrap {
     display: block;
     float: left;
     width: 11.625%;
@@ -394,7 +390,7 @@ nav ul .active:before {
     user-select: none;
     cursor: pointer;
 }
-.form-order .radio-wrap:before {
+.radio-wrap:before {
     content: '';
     display: block;
     width: 15px;
@@ -410,11 +406,11 @@ nav ul .active:before {
     top: 0;
     bottom: 0;
 }
-.form-order .form-radio:checked + .radio-wrap {
+.form-radio:checked + .radio-wrap {
     background-color: #f76d2c;
     color: #ffffff;
 }
-.form-order .form-radio:checked + .radio-wrap:before {
+.form-radio:checked + .radio-wrap:before {
     background: #ffffff url('../images/icon-ok-orange.png') no-repeat center;
     border: 1px solid transparent;
 }
@@ -437,7 +433,7 @@ nav ul .active:before {
     font-family: 'Roboto Medium', sans-serif;
     line-height: 50px;
 }
-.form-order .custom-select {
+.custom-select {
     display: block;
     width: 11%;
     height: 36px;
@@ -447,10 +443,10 @@ nav ul .active:before {
     left: 2.5%;
     bottom: 15%;
 }
-.form-order .kpp-chooser {
+.kpp-chooser {
     left: 14.5%;
 }
-.form-order .custom-select .current-value {
+.custom-select .current-value {
     width: 100%;
     height: 100%;
     line-height: 36px;
@@ -462,7 +458,7 @@ nav ul .active:before {
     cursor: pointer;
     position: relative;
 }
-.form-order .custom-select .current-value:before {
+.custom-select .current-value:before {
     content: '';
     display: block;
     width: 8px;
@@ -473,10 +469,10 @@ nav ul .active:before {
     background: transparent url('../images/sprite-arrows.png') no-repeat left center;
     background-size: cover;
 }
-.form-order .custom-select .current-value.active:before {
+.custom-select .current-value.active:before {
     background-position: right center;
 }
-.form-order .custom-select ul {
+.custom-select ul {
     display: none;
     background-color: #ffffff;
     position: absolute;
@@ -485,12 +481,12 @@ nav ul .active:before {
     z-index: 1;
     padding: 5px 15px;
 }
-.form-order .custom-select ul li {
+.custom-select ul li {
     display: block;
     cursor: pointer;
     margin: 3px 0;
 }
-.form-order .custom-select ul li:hover {
+.custom-select ul li:hover {
     color: #f76d2c;
 }
 
@@ -568,7 +564,7 @@ nav ul .active:before {
 .brands .audi-brand {
     background-position: -135px -35px;
 }
-.brands .unknown-1-brand {
+.brands .mini-brand {
     background-position: 0 -70px;
 }
 .brands .nissan-brand {
@@ -583,13 +579,13 @@ nav ul .active:before {
 .brands .porsche-brand {
     background-position: 0 -105px;
 }
-.brands .horse-brand {
+.brands .ferrari-brand {
     background-position: -45px -105px;
 }
 .brands .opel-brand {
     background-position: -90px -105px;
 }
-.brands .unknown-2-brand {
+.brands .lamborghini-brand {
     background-position: -135px -105px;
 }
 .brands .mazda-brand {
@@ -598,7 +594,7 @@ nav ul .active:before {
 .brands .toyota-brand {
     background-position: -45px -140px;
 }
-.brands .unknown-3-brand {
+.brands .bentley-brand {
     background-position: -90px -140px;
 }
 .brands .jeep-brand {
@@ -607,6 +603,7 @@ nav ul .active:before {
 .brands a:hover {
     background-color: #aaaaaa;
 }
+
 
 /* main-panel */
 .main-panel {
@@ -644,7 +641,6 @@ nav ul .active:before {
     background: #ffffff;
     padding: 20px;
     border: 1px solid #e8e8e8;
-    margin-bottom: 25px;
 }
 .steps>.title {
     font-family: 'Roboto Medium', sans-serif;
@@ -697,15 +693,376 @@ nav ul .active:before {
     color: #313131;
 }
 
+.purchased-cars {
+    padding: 25px 0 40px;
+    background-color: #ffffff;
+}
 .purchased-cars .title {
     font-family: 'Roboto Medium', sans-serif;
     font-size: 18px;
     color: #292929;
     text-transform: uppercase;
     margin-bottom: 5px;
+    padding: 0 20px;
 }
-.purchased-cars .title {
+.purchased-cars .text {
     color: #828282;
+    padding: 0 20px;
+}
+.purchased-cars .products {
+    margin: 20px 0 0;
+}
+.purchased-cars .product-card {
+    display: block;
+    float: left;
+    width: 31%;
+    margin: 0 3.5% 3.5% 0;
+    border: 1px solid #e8e8e8;
+    text-decoration: none;
+    position: relative;
+}
+.purchased-cars .product-card:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    z-index: 1;
+}
+.purchased-cars .product-card:hover:before {
+    background-color: #f76d2c;
+}
+.purchased-cars .product-card:nth-child(3n) {
+    margin-right: 0;
+}
+.purchased-cars .product-image {
+    position: relative;
+    overflow: hidden;
+}
+.purchased-cars .product-cost {
+    background-color: #f76d2c;
+    font-family: 'Roboto Black', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    color: #fffefe;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 8px 15px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.purchased-cars .product-cost span {
+    font-family: 'Roboto Black', sans-serif;
+    font-size: 16px;
+    color: #fffefe;
+}
+.purchased-cars .product-name {
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 18px;
+    color: #292929;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e8e8e8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.purchased-cars .product-manufacture-year, .purchased-cars .product-mileage, .purchased-cars .product-transmission {
+    display: block;
+    width: 32%;
+    float: left;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Roboto Medium', sans-serif;
+    color: #292929;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.purchased-cars .product-manufacture-year span, .purchased-cars .product-mileage span, .purchased-cars .product-transmission span {
+    font-family: 'Roboto Medium', sans-serif;
+    color: #292929;
+}
+.purchased-cars .product-mileage {
+    width: 35%;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+}
+.show-all {
+    display: inline-block;
+    vertical-align: middle;
+    color: #000000;
+    position: relative;
+    margin: 0 0 10px 20px;
+}
+.show-all:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 10px;
+    background: transparent url('../images/sprite-arrows-side.png') no-repeat left center;
+    background-size: cover;
+    margin-left: 10px;
+}
+
+/* statistics */
+.statistics {
+    padding: 60px 0 100px;
+    background: url('../images/background-statistics.jpg') no-repeat left center;
+    background-size: cover;
+}
+.statistics ul {
+    width: 70%;
+}
+.statistics ul li {
+    position: relative;
+    -moz-text-align-last: center;
+    -ms-text-align-last: center;
+    text-align-last: center;
+    text-align: center;
+}
+.statistics .number {
+    display: inline-block;
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    border: 3px solid #f76d2c;
+    padding: 5px 20px;
+}
+.statistics .text {
+    font-family: 'Roboto Medium', sans-serif;
+    color: #ffffff;
+    display: block;
+    width: 140%;
+    position: absolute;
+    top: 120%;
+    left: -20%;
+}
+.statistics ul li:nth-child(2) .text {
+    width: 250%;
+    left: -75%;
+}
+
+/* why-we */
+.why-we {
+    width: 400px;
+    padding: 70px 0 30px 40px;
+}
+.why-we .title {
+    position: relative;
+    margin-bottom: 35px;
+}
+.why-we .title:before {
+    content: '8';
+    display: block;
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 58px;
+    color: #f76d2c;
+    line-height: 1;
+    position: absolute;
+    left: -40px;
+    bottom: -4px;
+}
+.why-we .title p, .why-we .title p span {
+    display: block;
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 24px;
+    color: #292929;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.why-we .title p span {
+    color: #f76d2c;
+}
+.why-we ul li {
+    min-height: 70px;
+    font-size: 16px;
+    color: #292929;
+    position: relative;
+    padding-right: 30px;
+}
+.why-we ul li:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 13px;
+    background: transparent url('../images/icon-ok-orange-large.png') no-repeat center;
+    position: absolute;
+    top: 3px;
+    left: -35px;
+}
+
+/* promo-block */
+.promo-block {
+    overflow: hidden;
+}
+.promo-block .block-content {
+    position: relative;
+    padding: 55px 0 55px 410px;
+}
+.side-image {
+    width: 599px;
+    height: 550px;
+    background: transparent url('../images/background-side.png') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: -219px;
+}
+.promo-block h2 {
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 24px;
+    color: #292929;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.promo-block .text {
+    font-size: 15px;
+    color: #4f4f4f;
+    margin-bottom: 30px;
+}
+.promo-block .title {
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 16px;
+    color: #292929;
+    margin-bottom: 15px;
+}
+.promo-block ul li {
+    display: list-item;
+    font-size: 15px;
+    color: #f76d2c;
+    list-style: square outside;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.promo-block ul li p {
+    font-size: 15px;
+    color: #4f4f4f;
+}
+
+
+/* form-express-wrap */
+.form-express-wrap {
+    width: 630px;
+    padding: 70px 0 100px;
+}
+.form-express-image {
+    width: 475px;
+    margin: 0 auto;
+}
+.form-express {
+    border: 1px solid #e8e8e8;
+    border-top: 4px solid #f76d2c;
+    padding: 20px 0;
+}
+.form-express .title {
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #f76d2c;
+    line-height: 1;
+    padding: 0 20px;
+}
+.form-express .text {
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 16px;
+    color: #6c6c6c;
+    padding: 0 20px;
+}
+.form-express fieldset {
+    border: none;
+    border-top: 1px solid #e8e8e8;
+    margin-top: 20px;
+    padding: 20px 20px 0;
+}
+.form-express .custom-select {
+    width: 23.5%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    float: left;
+    margin-right: 2%;
+    border: 1px solid #e8e8e8;
+}
+.form-express .kpp-chooser {
+    margin-right: 0;
+}
+.form-express .form-submit-wrap {
+    width: 100%;
+    padding: 0 20px;
+}
+.form-express .form-submit {
+    width: 100%;
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 16px;
+    padding: 20px;
+}
+.form-express .form-field-wrap {
+    display: block;
+    width: 49%;
+    height: 36px;
+    margin: 0 2% 2% 0;
+    float: left;
+}
+.form-express .form-field-wrap:nth-child(2) {
+    margin-right: 0;
+}
+
+/* articles */
+.articles {
+    padding-top: 65px;
+}
+.articles .title {
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 24px;
+    color: #292929;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.article-preview {
+    display: block;
+    width: 31.5%;
+    margin-right: 2.75%;
+    float: left;
+    border: 1px solid #e8e8e8;
+    padding-bottom: 15px;
+}
+.article-preview:last-child {
+    margin-right: 0;
+}
+.article-preview-image {
+    display: block;
+}
+.article-preview-title {
+    display: block;
+    margin: 15px 15px 5px 15px ;
+    text-decoration: none;
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 16px;
+    color: #292929;
+    height: 40px;
+    overflow-y: hidden;
+}
+.article-preview-title:hover {
+    text-decoration: underline;
+}
+.article-date {
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 12px;
+    color: #878787;
+    padding: 0 15px;
+}
+.articles .show-all {
+    margin: 25px 0 0 0;
 }
 
 /******************************

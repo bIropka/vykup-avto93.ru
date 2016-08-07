@@ -9,7 +9,7 @@ $(document).ready(function () {
         $(this).next().slideToggle();
     });
 
-    $('.form-order .custom-select ul li').click(function() {
+    $('.custom-select ul li').click(function() {
         $(this).parent().slideUp();
         $(this).parent().siblings('.current-value').removeClass('active');
         var value = $(this).html();
