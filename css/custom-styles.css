@@ -178,17 +178,22 @@ body {
 .header-top {
     background-color: #ffffff;
     border-bottom: 1px solid #eeeeee;
+    position: relative;
 }
-.header-top .block-content>div {
+.h1, .header-contact {
     width: 20%;
     border-left: 1px solid #eeeeee;
     float: left;
     text-align: center;
     height: 67px;
 }
-.header-top .block-content .h1 {
+.mobile-contacts {
+    display: none;
+}
+.h1 {
     width: 22%;
     padding-top: 22px;
+    min-width: 120px;
 }
 h1 {
     display: inline-block;
@@ -200,7 +205,7 @@ h1 {
 .contact-email {
     padding-top: 24px;
 }
-.header-top .block-content .contact-phones {
+.header-top .contact-phones {
     width: 18%;
     padding-top: 15px;
 }
@@ -212,6 +217,9 @@ h1 {
     padding-left: 25px;
     position: relative;
     text-decoration: none;
+}
+.contact-phones {
+    min-width: 135px;
 }
 .contact-address p {
     width: 80%;
@@ -233,8 +241,10 @@ h1 {
 .contact-phones a:first-child:before {
     background: transparent url('../images/sprite-icons.png') right;
 }
-.header-top .block-content .make-order-wrap {
+.header-top .make-order-wrap {
+    float: right;
     text-align: right;
+    min-width: 190px;
 }
 .make-order {
     display: inline-block;
@@ -278,6 +288,10 @@ h1 {
     left: 0;
 }
 
+.mobile-menu {
+    display: none;
+}
+
 nav {
     display: block;
     width: 60%;
@@ -314,7 +328,7 @@ nav ul .active:before {
     width: 767px;
     height: 146px;
     background: transparent url('../images/background-form.png') no-repeat center;
-    background-size: cover;
+    background-size: auto 100%;
     margin: auto;
     position: absolute;
     top: 30px;
@@ -1153,6 +1167,8 @@ nav ul .active:before {
     float: left;
     font-size: 24px;
     margin: 0;
+    color: #f76d2c;
+    padding-left: 30px;
 }
 .footer-bottom .logo:before {
     width: 55px;
@@ -1220,4 +1236,216 @@ nav ul .active:before {
     -ms-transform: translateY(-10px);
     -o-transform: translateY(-10px);
     transform: translateY(-10px);
+}
+
+/******************************
+******* media queries *********
+******************************/
+
+@media (max-width: 1170px) {
+
+    .h1 {
+        width: 18%;
+        padding-top: 12px;
+    }
+    .contact-address {
+        width: 24%;
+    }
+    nav ul li a {
+        font-size: 15px;
+    }
+    .radio-wrap {
+        font-size: 12px;
+    }
+    .main-panel {
+        width: 750px;
+    }
+    .purchased-cars .product-name {
+        font-size: 16px;
+    }
+    .purchased-cars .product-manufacture-year, .purchased-cars .product-mileage, .purchased-cars .product-transmission,
+    .purchased-cars .product-manufacture-year span, .purchased-cars .product-mileage span, .purchased-cars .product-transmission span{
+        font-size: 12px;
+    }
+    .statistics ul {
+        width: 90%;
+    }
+    .form-express-wrap {
+        width: 550px;
+    }
+    .footer-bottom .block-content .contact-address {
+        width: 22%;
+    }
+    .footer-bottom .social-links {
+        width: 16%;
+    }
+
+}
+
+@media (max-width: 1080px) {
+
+    .main-panel {
+        width: 700px;
+    }
+    .statistics ul {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .footer-bottom .logo {
+        font-size: 20px;
+        padding-left: 25px;
+    }
+    .footer-bottom .logo span {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    body {
+        background-image: none;
+    }
+    .block-content {
+        padding: 0 15px;
+    }
+    .header-top .block-content {
+        padding: 15px;
+    }
+    .header-top .block-content .h1 {
+        display: inline-block;
+        border: none;
+        padding-top: 3px;
+        height: 40px;
+    }
+    .header-top .make-order-wrap {
+        display: inline-block;
+        float: none;
+        min-width: 190px;
+        border: none;
+        margin: 0;
+        padding: 0;
+        height: 46px;
+    }
+    .make-order {
+        margin: 0;
+    }
+    .mobile-contacts {
+        display: block;
+        padding-right: 15px;
+        font-family: 'Roboto Medium', sans-serif;
+        font-size: 20px;
+        line-height: 1;
+        position: absolute;
+        top: 26px;
+        right: 15px;
+    }
+    .mobile-contacts:before, .mobile-menu:before {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 5px;
+        background: transparent url('../images/sprite-arrows.png') no-repeat left center;
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        top: 8px;
+    }
+    .mobile-contacts.active:before, .mobile-menu.active:before {
+       background-position: right center;
+    }
+    .header-top .header-contact {
+        display: none;
+        height: auto;
+        width: 190px;
+        margin: 0 auto;
+        padding: 10px 0;
+        text-align: left;
+        float: none;
+        background-color: #e8e8e8;
+        border: none;
+        position: absolute;
+        right: 10px;
+        top: 50px;
+        z-index: 3;
+    }
+    .header-top .contact-email {
+        -webkit-border-radius: 10px 10px 0 0;
+        -moz-border-radius: 10px 10px 0 0;
+        border-radius: 10px 10px 0 0;
+    }
+    .header-top .contact-address {
+        top: 80px;
+    }
+    .header-top .contact-phones {
+        top: 130px;
+        -webkit-border-radius: 0 0 10px 10px;
+        -moz-border-radius: 0 0 10px 10px;
+        border-radius: 0 0 10px 10px;
+    }
+    .header-top .header-contact a, .header-top .header-contact p {
+        display: inline-block;
+        width: 190px;
+        padding-left: 30px;
+    }
+    .header-top .header-contact a:first-child:before, .header-top .header-contact p:first-child:before {
+        left: 10px;
+    }
+    nav {
+        width: auto;
+        position: relative;
+    }
+    .mobile-menu {
+        display: block;
+        padding-right: 15px;
+        font-family: 'Roboto Medium', sans-serif;
+        font-size: 20px;
+        line-height: 1;
+        text-transform: uppercase;
+        position: relative;
+    }
+    nav ul {
+        display: none;
+        height: auto;
+        width: 190px;
+        margin: 0;
+        padding: 10px;
+        background-color: #e8e8e8;
+        position: absolute;
+        right: 0;
+        top: 25px;
+        z-index: 3;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -moz-text-align-last: right;
+        -ms-text-align-last: right;
+        text-align-last: right;
+        text-align: right;
+    }
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    nav ul li:last-child {
+        margin-bottom: 0;
+    }
+    nav ul .active:before {
+        bottom: -5px;
+    }
+    nav ul li a {
+        display: inline-block;
+    }
+    .main-panel, .sidebar, .why-we, .form-express-wrap {
+        width: 100%;
+        float: none;
+    }
+    .tagline .title {
+        font-size: 32px;
+    }
+    .header-form-image {
+        width: 100%;
+        height: 146px;
+    }
+
 }
