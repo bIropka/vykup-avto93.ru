@@ -4,16 +4,20 @@ $(document).ready(function () {
      ******* init scripts *********
      ******************************/
     if ($(window).width() > '1024'){
-        $('.header-contact').css('display', 'block')
+        $('.header-contact').css('display', 'block');
+        $('nav ul').css('display', 'block');
     } else {
-        $('.header-contact').css('display', 'none')
+        $('.header-contact').css('display', 'none');
+        $('nav ul').css('display', 'none');
     }
 
     $(window).resize(function(){
         if ($(window).width() > '1024'){
-            $('.header-contact').css('display', 'block')
+            $('.header-contact').css('display', 'block');
+            $('nav ul').css('display', 'block');
         } else {
-            $('.header-contact').css('display', 'none')
+            $('.header-contact').css('display', 'none');
+            $('nav ul').css('display', 'none');
         }
     });
 

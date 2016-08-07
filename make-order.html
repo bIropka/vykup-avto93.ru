@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/custom-styles.css"/>
+</head>
+<body>
+
+<div class="header">
+
+    <div class="header-top">
+
+        <div class="block-content clearfix">
+
+            <div class="h1">
+
+                <h1>Выкуп авто в Краснодаре</h1>
+
+            </div>
+
+            <div class="make-order-wrap">
+
+                <button class="make-order button-orange">Оформить заявку</button>
+
+            </div>
+
+            <div class="mobile-contacts">КОНТАКТЫ</div>
+
+            <div class="contact-email header-contact">
+
+                <a href="mailto:info@vykup-avto93.ru" class="email">info@vykup-avto93.ru</a>
+
+            </div>
+
+            <div class="contact-address header-contact">
+
+                <p>г. Краснодар,</p>
+
+                <p>ул. Старокубанская 40</p>
+
+            </div>
+
+            <div class="contact-phones header-contact">
+
+                <a href="tel:+7 967 322 02 02">+7 967 322 02 02</a>
+
+                <a href="tel:+7 967 245 67 31">+7 967 245 67 31</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="header-nav">
+
+        <div class="block-content clearfix">
+
+            <a href="index.html" class="logo">vykup-avto93<span>.ru</span></a>
+
+            <nav class="right-column in-wide">
+
+                <div class="mobile-menu">меню</div>
+
+                <ul>
+                    <li class="active"><a href="#">Главная</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Оценка</a></li>
+                    <li><a href="#">О выкупе</a></li>
+                    <li><a href="#">Заявка на кредит</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+    <div class="header-form">
+
+        <div class="block-content">
+
+            <div class="header-form-image"></div>
+
+            <div class="form-header">
+
+                <p class="form-title">Оформить заявку на выкуп авто</p>
+
+                <p class="text">Быстрая онлайн оценка автомобилия оформление и осмотр за 20 минут!</p>
+
+            </div>
+
+            <form action="#" id="form-order" class="form-order clearfix">
+
+                <label class="form-field-wrap">
+                    <input type="text" id="order-name" class="form-field" placeholder="Имя" required/>
+                </label>
+
+                <label class="form-field-wrap">
+                    <input type="text" id="order-phone" class="form-field" placeholder="Телефон" required/>
+                </label>
+
+                <label class="form-field-wrap">
+                    <input type="text" id="order-brand" class="form-field" placeholder="Марка" required/>
+                </label>
+
+                <label class="form-field-wrap">
+                    <input type="text" id="order-model" class="form-field" placeholder="Модель" required/>
+                </label>
+
+                <input type="radio" id="order-state-good" name="order-state" class="form-radio hidden" checked/>
+                <label for="order-state-good" class="radio-wrap">На ходу</label>
+
+                <input type="radio" id="order-state-bad" name="order-state" class="form-radio hidden"/>
+                <label for="order-state-bad" class="radio-wrap radio-bad-wrap">Аварийная</label>
+
+                <div class="custom-select year-chooser">
+                    <p class="current-value">Год</p>
+                    <ul>
+                        <li class="item">2016</li>
+                        <li class="item">2015</li>
+                        <li class="item">2014</li>
+                        <li class="item">2013</li>
+                        <li class="item">2012</li>
+                        <li class="item">2011</li>
+                        <li class="item">2010</li>
+                        <li class="item">2009</li>
+                        <li class="item">2008</li>
+                        <li class="item">2007</li>
+                        <li class="item">2006</li>
+                        <li class="item">2005</li>
+                        <li class="item">2004</li>
+                        <li class="item">2003</li>
+                        <li class="item">2002</li>
+                        <li class="item">2001</li>
+                    </ul>
+                    <label><input type="text" id="order-year" class="hidden" required/></label>
+                </div>
+
+                <div class="custom-select kpp-chooser">
+                    <p class="current-value">КПП</p>
+                    <ul>
+                        <li class="item">2016</li>
+                        <li class="item">2015</li>
+                        <li class="item">2014</li>
+                        <li class="item">2013</li>
+                        <li class="item">2012</li>
+                        <li class="item">2011</li>
+                        <li class="item">2010</li>
+                        <li class="item">2009</li>
+                        <li class="item">2008</li>
+                        <li class="item">2007</li>
+                        <li class="item">2006</li>
+                        <li class="item">2005</li>
+                        <li class="item">2004</li>
+                        <li class="item">2003</li>
+                        <li class="item">2002</li>
+                        <li class="item">2001</li>
+                    </ul>
+                    <label><input type="text" id="order-kpp" class="hidden" required/></label>
+                </div>
+
+                <label class="form-field-wrap form-textarea-wrap">
+                    <textarea id="order-text" class="form-field form-textarea" cols="" rows="" placeholder="Дополнительная информация"></textarea>
+                </label>
+
+                <div class="form-submit-wrap">
+
+                    <p>Вы получите ответ в течении 10 минут</p>
+
+                    <input type="submit" class="form-submit button-orange" value="Оформить заявку"/>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="block-content make-order-page">
+
+    <div class="tagline">
+
+        <p class="title">Оформить заявку онлайн на выкуп авто в Краснодаре</p>
+
+        <p class="text">
+            Срочный выкуп автомобиля - наша основная и самая главная услуга для наших клиентов, позволяющая им быстро, просто, гарантированно и главное безопасно получить наличные денежные средства от продажи своего автомобиля в день обращения. Выплата наличными сразу, до 90% от рыночной стоимости! Выкупаются практически любые автомобили: новые, с пробегом, иномарки, отечественные, китайские.
+        </p>
+
+    </div>
+
+    <div class="steps">
+
+        <p class="title">Теперь продажа автомобиля — проще некуда!</p>
+
+        <p class="text">Всего за 3 простых шага Вы продадите свою машину</p>
+
+        <ul>
+            <li>
+                <p class="title">ЗВОНИТЕ ИЛИ ОСТАВЛЯЕТЕ ЗАЯВКУ</p>
+                <p class="text">Для определения предварительной стоимости своего автомобиля Вы заполняете заявку на нашем сайте или обращаетесь по телефону</p>
+            </li>
+            <li>
+                <p class="title">СПЕЦИАЛИСТ ВЫЕЗЖАЕТ НА ОЦЕНКУ АВТОМОБИЛЯ</p>
+                <p class="text">Производится осмотр автомобиля, подтверждаем стоимость выкупа.</p>
+            </li>
+            <li>
+                <p class="title">ОФОРМЛЯЕМ ДОКУМЕНТЫ И ВЫПЛАЧИВАЕМ ДЕНЬГИ</p>
+                <p class="text">Если вас все устраивает, оформляем сделку. Вы получаете наличные деньги (сразу после оформления и передачи документов с автомобилем).</p>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="footer">
+
+    <div class="footer-top in-wide">
+
+        <div class="block-content">
+
+            <div class="markello">
+                <p>Разработка сайта</p>
+                <a href="#"></a>
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="#">Выкуп авто</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+
+            <ul class="footer-links">
+                <li><a href="#">Заявка на кредит</a></li>
+                <li><a href="#">Оценка</a></li>
+            </ul>
+
+            <ul class="footer-links">
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Карта сайта</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <div class="block-content clearfix">
+
+            <a href="index.html" class="logo">vykup-avto93<span>.ru</span></a>
+
+            <div class="contact-email">
+
+                <a href="mailto:info@vykup-avto93.ru" class="email">info@vykup-avto93.ru</a>
+
+            </div>
+
+            <div class="contact-address">
+
+                <p>г. Краснодар,</p>
+
+                <p>ул. Старокубанская 40</p>
+
+            </div>
+
+            <div class="contact-phones">
+
+                <a href="tel:+7 967 322 02 02">+7 967 322 02 02</a>
+
+                <a href="tel:+7 967 245 67 31">+7 967 245 67 31</a>
+
+            </div>
+
+            <ul class="social-links">
+                <li><a href="#" class="vk-link"></a></li>
+                <li><a href="#" class="fb-link"></a></li>
+                <li><a href="#" class="tw-link"></a></li>
+                <li><a href="#" class="od-link"></a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/custom-scripts.js"></script>
+</body>
+</html>

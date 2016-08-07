@@ -1080,6 +1080,14 @@ nav ul .active:before {
 }
 
 /******************************
+****** make order page ********
+******************************/
+.make-order-page .tagline .title {
+    font-size: 32px;
+}
+
+
+/******************************
 ********** footer *************
 ******************************/
 
@@ -1289,6 +1297,9 @@ nav ul .active:before {
     .footer-bottom .social-links {
         width: 16%;
     }
+    .make-order-page .tagline .title {
+        font-size: 28px;
+    }
 
 }
 
@@ -1489,6 +1500,9 @@ nav ul .active:before {
         width: 100%;
         float: none;
     }
+    .brands ul li:nth-child(4n) {
+        margin-right: 7px;
+    }
     .statistics {
         padding-bottom: 0;
     }
@@ -1600,6 +1614,9 @@ nav ul .active:before {
     }
     .form-express-image {
         width: 100%;
+    }
+    .make-order-page .tagline .title {
+        font-size: 22px;
     }
 
 }
@@ -1756,6 +1773,9 @@ nav ul .active:before {
     }
     .social-links {
         margin-left: 30px;
+    }
+    .make-order-page .tagline .title {
+        font-size: 18px;
     }
 
 }
