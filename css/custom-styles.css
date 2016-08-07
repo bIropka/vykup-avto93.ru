@@ -918,7 +918,7 @@ nav ul .active:before {
 }
 .promo-block .block-content {
     position: relative;
-    padding: 55px 0 55px 410px;
+    padding: 55px 30px 55px 410px;
 }
 .side-image {
     width: 599px;
@@ -1138,6 +1138,7 @@ nav ul .active:before {
 }
 .footer-links {
     display: inline-block;
+    vertical-align: top;
     -moz-text-align-last: left;
     -ms-text-align-last: left;
     text-align-last: left;
@@ -1162,6 +1163,7 @@ nav ul .active:before {
 .footer-bottom .logo {
     display: block;
     width: 24%;
+    min-width: 210px;
     height: 55px;
     line-height: 55px;
     float: left;
@@ -1187,6 +1189,7 @@ nav ul .active:before {
     float: left;
     text-align: center;
     height: 55px;
+    min-width: 210px;
 }
 .footer-bottom a, .footer-bottom p {
     display: inline-block;
@@ -1195,16 +1198,23 @@ nav ul .active:before {
     text-decoration: none;
     color: #d5d5d5;
 }
-.footer-bottom .contact-email {
+.footer-bottom .block-content .contact-email {
     padding-top: 20px;
+    min-width: 160px;
 }
-.footer-bottom .contact-phones, .footer-bottom .contact-address {
+.footer-bottom .block-content .contact-phones {
     padding-top: 10px;
+    min-width: 150px;
+}
+.footer-bottom .block-content .contact-address {
+    padding-top: 10px;
+    min-width: 210px;
 }
 
 .footer-bottom .social-links {
     float: left;
     width: 19%;
+    min-width: 155px;
     margin-top: 12px;
     text-align: right;
 }
@@ -1321,7 +1331,7 @@ nav ul .active:before {
     .header-top .make-order-wrap {
         display: inline-block;
         float: none;
-        min-width: 190px;
+        min-width: 0;
         border: none;
         margin: 0;
         padding: 0;
@@ -1436,9 +1446,70 @@ nav ul .active:before {
     nav ul li a {
         display: inline-block;
     }
+    .form-order .radio-wrap, .form-order .custom-select {
+        position: relative;
+        float: left;
+        margin-bottom: 10px;
+        width: 15.625%;
+        margin-right: 1.25%;
+        border: 1px solid #e8e8e8;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .form-radio:checked + .radio-wrap {
+        border: 1px solid #f76d2c;
+    }
+    .form-order .form-field-wrap, .form-order .form-field-wrap:nth-child(4) {
+        width: 32.5%;
+        margin-right: 1.25%;
+    }
+    .form-order .form-field-wrap:nth-child(3), .form-order .kpp-chooser {
+        margin-right: 0;
+    }
+    .form-order .form-textarea-wrap {
+        width: 66.25%;
+        margin-right: 1.25%;
+    }
+    .form-order .form-submit-wrap {
+        width: 32.5%;
+    }
+    .services ul {
+        text-align: center;
+    }
+    .services ul li {
+        display: inline-block;
+        margin: 0 10px 10px;
+    }
+    .services ul li:last-child {
+        margin-bottom: 10px;
+    }
     .main-panel, .sidebar, .why-we, .form-express-wrap {
         width: 100%;
         float: none;
+    }
+    .statistics {
+        padding-bottom: 0;
+    }
+    .statistics ul {
+        width: 100%;
+        -moz-text-align-last: center;
+        -ms-text-align-last: center;
+        text-align-last: center;
+        text-align: center;
+    }
+    .statistics ul li {
+        margin: 0 50px 100px;
+    }
+    .why-we {
+        padding: 50px 0 10px 40px;
+    }
+    .why-we ul li {
+        min-height: 55px;
+    }
+    .form-express-wrap {
+        padding: 30px 0 50px;
     }
     .tagline .title {
         font-size: 32px;
@@ -1446,6 +1517,245 @@ nav ul .active:before {
     .header-form-image {
         width: 100%;
         height: 146px;
+    }
+    .promo-block .block-content {
+        padding: 25px 15px 25px 310px;
+    }
+    .side-image {
+        left: -299px;
+    }
+    .articles ul {
+        text-align: center;
+    }
+    .articles ul li, .articles ul li:last-child {
+        display: inline-block;
+        float: none;
+        width: 280px;
+        text-align: left;
+        margin: 0 20px 20px;
+    }
+    .article-preview-title {
+        font-size: 15px;
+    }
+    .footer-links li {
+        display: block;
+    }
+    .markello a {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .block-content {
+        padding: 0 10px;
+    }
+    nav {
+        margin-right: 5px;
+    }
+    .form-order {
+        padding: 0;
+        border: none;
+    }
+    .form-order .form-field-wrap, .form-order .form-field-wrap:nth-child(3), .form-order .form-field-wrap:nth-child(4) {
+        width: 49.5%;
+        margin-right: 1%;
+    }
+    .form-order .radio-wrap, .form-order .custom-select {
+        width: 24.25%;
+        margin-right: 1%;
+    }
+    .form-order .form-field-wrap:nth-child(2n), .form-order .kpp-chooser {
+        margin-right: 0;
+    }
+    .form-order .form-submit-wrap {
+        width: 49.5%;
+        margin-right: 0;
+    }
+    .purchased-cars .product-card, .purchased-cars .product-card:nth-child(3n) {
+        width: 49%;
+        margin: 0 2% 2% 0;
+    }
+    .purchased-cars .product-card:nth-child(2n) {
+        margin: 0 0 2% 0;
+    }
+    .side-image {
+        display: none;
+    }
+    .form-express-wrap {
+        padding: 25px 0;
+    }
+    .promo-block .block-content {
+        padding: 25px 10px;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .block-content {
+        padding: 0 5px;
+    }
+    .header-top .block-content {
+        padding: 15px 5px;
+    }
+    .form-express-image {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .h1 {
+        width: 90px;
+        min-width: 100px;
+    }
+    h1 {
+        width: 100%;
+        font-size: 12px;
+    }
+    nav {
+        margin-right: 10px;
+        margin-top: 27px;
+    }
+    .make-order {
+        width: 100px;
+        height: 35px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 0;
+    }
+    .mobile-contacts {
+        font-size: 14px;
+        top: 26px;
+        right: 15px;
+    }
+    .mobile-menu {
+        font-size: 14px;
+    }
+    .mobile-contacts:before, .mobile-menu:before {
+        top: 5px;
+    }
+    .logo, .logo span {
+        height: 36px;
+        font-size: 20px;
+        line-height: 36px;
+    }
+    .logo:before {
+        width: 45px;
+        height: 40px;
+        background-size: cover;
+        left: 10px;
+    }
+    .form-order .form-field-wrap, .form-order .form-field-wrap:nth-child(3), .form-order .form-field-wrap:nth-child(4), .form-order .form-field-wrap:nth-child(2n) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .form-order .radio-wrap, .form-order .custom-select {
+        width: 49.5%;
+        margin-right: 1%;
+        margin-bottom: 15px;
+    }
+    .form-order .radio-bad-wrap, .form-order .kpp-chooser {
+        margin-right: 0;
+    }
+    .form-order .form-submit-wrap {
+        width: 100%;
+        margin-right: 0;
+    }
+    .steps ul li {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .purchased-cars .product-card, .purchased-cars .product-card:nth-child(3n), .purchased-cars .product-card:nth-child(2n) {
+        width: 100%;
+        margin: 0 0 30px 0;
+        border: 2px solid #cccccc;
+    }
+    .form-express {
+        border: none;
+        border-top: 4px solid #f76d2c;
+    }
+    .form-express fieldset {
+        border: none;
+        margin-top: 20px;
+        padding: 20px 0 0;
+    }
+    .form-express .form-field-wrap {
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+    .form-express .custom-select {
+        width: 49%;
+        margin-right: 2%;
+        margin-bottom: 15px;
+    }
+    .form-express .kpp-chooser {
+        margin-right: 0;
+    }
+    .form-express .form-submit-wrap {
+        padding: 0;
+    }
+    .tagline {
+        padding: 20px;
+        background-color: #161616;
+    }
+    .tagline .title {
+        font-size: 20px;
+    }
+    .steps>.title {
+        font-size: 18px;
+    }
+    .why-we .title p, .why-we .title p span {
+        font-size: 18px;
+    }
+    .why-we .title:before {
+        font-size: 44px;
+    }
+    .why-we ul li {
+        margin-bottom: 20px;
+    }
+    .statistics .number {
+        font-size: 22px;
+        padding: 5px 20px;
+    }
+    .form-express-wrap {
+        padding: 0;
+    }
+    .promo-block h2 {
+        font-size: 18px;
+    }
+    .articles .title {
+        font-size: 18px;
+    }
+    .articles ul li, .articles ul li:last-child {
+        margin: 0 0 20px;
+    }
+    .footer-top {
+        -moz-text-align-last: left;
+        -ms-text-align-last: left;
+        text-align-last: left;
+        text-align: left;
+    }
+    .footer-links {
+        width: 120px;
+        margin: 10px;
+    }
+    .footer-links li {
+        margin: 10px 0;
+    }
+    .footer-bottom .block-content .contact-email, .footer-bottom .block-content .contact-address, .footer-bottom .block-content .contact-phones {
+        width: 210px;
+        margin-left: 20px;
+    }
+    .footer-bottom a, .footer-bottom p {
+        width: 100%;
+        text-align: left;
+    }
+    .social-links {
+        margin-left: 30px;
     }
 
 }
