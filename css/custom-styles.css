@@ -167,6 +167,32 @@ body {
 .form-field:focus:-moz-placeholder {color: transparent;}
 .form-field:focus:-ms-input-placeholder {color: transparent;}
 
+.make-order-page .header-breadcrumbs ul {
+    margin-top: 15px;
+}
+.header-breadcrumbs ul li {
+    font-size: 13px;
+    color: #ffffff;
+    vertical-align: middle;
+}
+.header-breadcrumbs ul li:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 4px;
+    height: 7px;
+    background: transparent url('../images/arrow-side-white.png') no-repeat center;
+    margin: 0 5px 0 10px;
+}
+.header-breadcrumbs ul li:last-child:after {
+    display: none;
+}
+.header-breadcrumbs ul li a {
+    font-size: 13px;
+    color: #d5d5d5;
+}
+
+
 /******************************
 ********** header *************
 ******************************/
@@ -1085,7 +1111,112 @@ nav ul .active:before {
 .make-order-page .tagline .title {
     font-size: 32px;
 }
+.make-order-page .header-breadcrumbs {
+    margin-bottom: -25px;
+}
 
+/******************************
+****** contacts page ********
+******************************/
+.contacts-page {
+    background: none;
+}
+.contacts-page .header {
+    margin-bottom: 0;
+}
+.contacts-page .header-breadcrumbs {
+    padding: 15px;
+    background: linear-gradient(to right, #3c4959, #768589);
+}
+.on-map {
+    height: 350px;
+}
+
+.form-callback {
+    width: 360px;
+    margin-top: 50px;
+}
+.form-callback .form-title {
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 24px;
+    color: #292929;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    line-height: 1;
+    position: relative;
+}
+.form-callback .form-title:before, .contacts-block .title:before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 100%;
+    background-color: #f76d2c;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.form-callback .form-field-wrap {
+    display: block;
+    height: 36px;
+    margin-bottom: 10px;
+}
+.form-callback .form-textarea-wrap {
+    height: 100px;
+}
+.form-callback .form-textarea {
+    padding-top: 10px;
+}
+.form-callback .form-submit {
+    width: 100%;
+    height: 45px;
+}
+
+.contacts-block {
+    width: 580px;
+    margin-top: 110px;
+}
+.contacts-block .title {
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 18px;
+    color: #292929;
+    padding-left: 15px;
+    margin: 20px 0;
+    line-height: 1;
+    position: relative;
+}
+.contacts-block .contact-address, .contacts-block .contact-phones, .contacts-block .contact-email {
+    display: inline-block;
+    vertical-align: top;
+    width: 210px;
+    float: none;
+    padding: 0 0 0 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.contacts-block .contact-phones {
+    width: 160px;
+}
+.contacts-block .contact-email {
+    width: 180px;
+}
+.contacts-block .contact-address p, .contacts-block .contact-phones a, .contacts-block .contact-email a {
+    display: block;
+    text-decoration: none;
+}
+.contacts-block .working-days {
+    display: inline-block;
+    margin-right: 30px;
+}
+.contacts-block .working-days p, .contacts-block .working-days p span {
+    display: block;
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 15px;
+    color: #292929;
+}
+.contacts-block .working-days p span {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 14px;
+}
 
 /******************************
 ********** footer *************
@@ -1457,6 +1588,14 @@ nav ul .active:before {
     nav ul li a {
         display: inline-block;
     }
+    .make-order-page .header-breadcrumbs {
+        padding: 15px;
+        margin: 0;
+        background: linear-gradient(to right, #3c4959, #768589);
+    }
+    .make-order-page .header-breadcrumbs ul {
+        margin: 0;
+    }
     .form-order .radio-wrap, .form-order .custom-select {
         position: relative;
         float: left;
@@ -1557,6 +1696,10 @@ nav ul .active:before {
     .markello a {
         display: block;
     }
+    .contacts-block {
+        width: 370px;
+        margin-top: 80px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1601,6 +1744,11 @@ nav ul .active:before {
     }
     .promo-block .block-content {
         padding: 25px 10px;
+    }
+    .form-callback, .contacts-block {
+        float: none;
+        width: 100%;
+        margin: 40px 0 0 0;
     }
 }
 
