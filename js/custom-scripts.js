@@ -39,6 +39,10 @@ $(document).ready(function () {
      ********* main page ***********
      ******************************/
 
+    $('.user-phone').click(function() {
+        $(this).focus();
+    });
+
     $('.custom-select .current-value').click(function() {
         if ($(this).hasClass('active')) {
             $('.custom-select .current-value').removeClass('active');
