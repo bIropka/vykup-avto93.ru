@@ -696,19 +696,21 @@ nav ul .active:before {
     font-size: 17px;
     color: #636262;
 }
-.steps ul {
+.steps ol {
     margin-top: 20px;
     counter-reset: li;
+    list-style: none;
 }
-.steps ul li {
+.steps ol li {
     vertical-align: top;
     width: 27%;
     margin-right: 6%;
+    display: inline-block;
 }
-.steps ul li:last-child {
+.steps ol li:last-child {
     margin-right: 0;
 }
-.steps ul li:before {
+.steps ol li:before {
     content: counter(li);
     counter-increment: li;
     display: block;
@@ -723,12 +725,12 @@ nav ul .active:before {
     text-align: center;
     margin-bottom: 5px;
 }
-.steps ul li .title {
+.steps ol li .title {
     font-family: 'Roboto Medium', sans-serif;
     color: #161616;
     margin-bottom: 5px;
 }
-.steps ul li .text {
+.steps ol li .text {
     color: #313131;
 }
 

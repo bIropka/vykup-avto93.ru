@@ -48,4 +48,8 @@ $(document).ready(function () {
         $('nav ul').fadeToggle(200);
     });
 
+    jQuery(function($){
+        $('.user-phone').mask("+7 ( 9 9 9 ) 9 9 9 - 9 9 - 9 9");
+    });
+
 });
