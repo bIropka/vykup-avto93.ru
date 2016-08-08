@@ -3,22 +3,36 @@ $(document).ready(function () {
     /******************************
      ******* init scripts *********
      ******************************/
+
+    var headerContact = $('.header-contact');
+
     if ($(window).width() > '1024'){
-        $('.header-contact').css('display', 'block');
+        headerContact.css('display', 'block');
         $('nav ul').css('display', 'block');
     } else {
-        $('.header-contact').css('display', 'none');
+        headerContact.css('display', 'none');
         $('nav ul').css('display', 'none');
     }
 
     $(window).resize(function(){
         if ($(window).width() > '1024'){
-            $('.header-contact').css('display', 'block');
+            headerContact.css('display', 'block');
             $('nav ul').css('display', 'block');
         } else {
-            $('.header-contact').css('display', 'none');
+            headerContact.css('display', 'none');
             $('nav ul').css('display', 'none');
         }
+    });
+
+    $(document).click(function() {
+
+        $target = $(event.target);
+
+            if (!$target.closest($('.custom-select')).length){
+                $('.custom-select .current-value').removeClass('active');
+                $('.custom-select ul').slideUp();
+            }
+
     });
 
     /******************************
@@ -26,8 +40,16 @@ $(document).ready(function () {
      ******************************/
 
     $('.custom-select .current-value').click(function() {
-        $(this).toggleClass('active');
-        $(this).next().slideToggle();
+        if ($(this).hasClass('active')) {
+            $('.custom-select .current-value').removeClass('active');
+            $('.custom-select ul').slideUp();
+        } else {
+            $('.custom-select .current-value').removeClass('active');
+            $('.custom-select ul').slideUp();
+            $(this).toggleClass('active');
+            $(this).next().slideToggle();
+        }
+
     });
 
     $('.custom-select ul li').click(function() {
@@ -40,7 +62,7 @@ $(document).ready(function () {
 
     $('.mobile-contacts').click(function() {
         $(this).toggleClass('active');
-        $('.header-contact').fadeToggle(200);
+        headerContact.fadeToggle(200);
     });
 
     $('.mobile-menu').click(function() {
