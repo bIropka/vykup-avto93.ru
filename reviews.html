@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/custom-styles.css"/>
+</head>
+<body class="reviews-page">
+
+<div class="header">
+
+    <div class="header-top">
+
+        <div class="block-content clearfix">
+
+            <div class="h1">
+
+                <h1>Выкуп авто в Краснодаре</h1>
+
+            </div>
+
+            <div class="make-order-wrap">
+
+                <button class="make-order button-orange">Оформить заявку</button>
+
+            </div>
+
+            <div class="mobile-contacts">КОНТАКТЫ</div>
+
+            <div class="contact-email header-contact">
+
+                <a href="mailto:info@vykup-avto93.ru" class="email">info@vykup-avto93.ru</a>
+
+            </div>
+
+            <div class="contact-address header-contact">
+
+                <p>г. Краснодар,</p>
+
+                <p>ул. Старокубанская 40</p>
+
+            </div>
+
+            <div class="contact-phones header-contact">
+
+                <a href="tel:+7 967 322 02 02">+7 967 322 02 02</a>
+
+                <a href="tel:+7 967 245 67 31">+7 967 245 67 31</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="header-nav">
+
+        <div class="block-content clearfix">
+
+            <a href="index.html" class="logo">vykup-avto93<span>.ru</span></a>
+
+            <nav class="right-column in-wide">
+
+                <div class="mobile-menu">меню</div>
+
+                <ul>
+                    <li class="active"><a href="#">Главная</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Оценка</a></li>
+                    <li><a href="#">О выкупе</a></li>
+                    <li><a href="#">Заявка на кредит</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+    <div class="header-breadcrumbs">
+
+        <ul class="block-content">
+            <li><a href="index.html">Главная страница</a></li>
+            <li><a href="index.html">Блог</a></li>
+            <li>Статичная страница</li>
+        </ul>
+
+    </div>
+
+    <div class="header-form">
+
+        <div class="block-content">
+
+            <div class="header-form-image"></div>
+
+            <form action="#" id="form-order" class="form-order clearfix">
+
+                <label class="form-field-wrap">
+                    <input type="text" id="order-name" class="form-field" placeholder="Имя" required/>
+                </label>
+
+                <label class="form-field-wrap">
+                    <input type="text" id="order-phone" class="form-field" placeholder="Телефон" required/>
+                </label>
+
+                <label class="form-field-wrap">
+                    <input type="text" id="order-brand" class="form-field" placeholder="Марка" required/>
+                </label>
+
+                <label class="form-field-wrap">
+                    <input type="text" id="order-model" class="form-field" placeholder="Модель" required/>
+                </label>
+
+                <input type="radio" id="order-state-good" name="order-state" class="form-radio hidden" checked/>
+                <label for="order-state-good" class="radio-wrap">На ходу</label>
+
+                <input type="radio" id="order-state-bad" name="order-state" class="form-radio hidden"/>
+                <label for="order-state-bad" class="radio-wrap radio-bad-wrap">Аварийная</label>
+
+                <div class="custom-select year-chooser">
+                    <p class="current-value">Год</p>
+                    <ul>
+                        <li class="item">2016</li>
+                        <li class="item">2015</li>
+                        <li class="item">2014</li>
+                        <li class="item">2013</li>
+                        <li class="item">2012</li>
+                        <li class="item">2011</li>
+                        <li class="item">2010</li>
+                        <li class="item">2009</li>
+                        <li class="item">2008</li>
+                        <li class="item">2007</li>
+                        <li class="item">2006</li>
+                        <li class="item">2005</li>
+                        <li class="item">2004</li>
+                        <li class="item">2003</li>
+                        <li class="item">2002</li>
+                        <li class="item">2001</li>
+                    </ul>
+                    <label><input type="text" id="order-year" class="hidden" required/></label>
+                </div>
+
+                <div class="custom-select kpp-chooser">
+                    <p class="current-value">КПП</p>
+                    <ul>
+                        <li class="item">2016</li>
+                        <li class="item">2015</li>
+                        <li class="item">2014</li>
+                        <li class="item">2013</li>
+                        <li class="item">2012</li>
+                        <li class="item">2011</li>
+                        <li class="item">2010</li>
+                        <li class="item">2009</li>
+                        <li class="item">2008</li>
+                        <li class="item">2007</li>
+                        <li class="item">2006</li>
+                        <li class="item">2005</li>
+                        <li class="item">2004</li>
+                        <li class="item">2003</li>
+                        <li class="item">2002</li>
+                        <li class="item">2001</li>
+                    </ul>
+                    <label><input type="text" id="order-kpp" class="hidden" required/></label>
+                </div>
+
+                <label class="form-field-wrap form-textarea-wrap">
+                    <textarea id="order-text" class="form-field form-textarea" cols="" rows="" placeholder="Дополнительная информация"></textarea>
+                </label>
+
+                <div class="form-submit-wrap">
+
+                    <p>Вы получите ответ в течении 10 минут</p>
+
+                    <input type="submit" class="form-submit button-orange" value="Оформить заявку"/>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="block-content reviews">
+
+    <div class="title">Отзывы о компании</div>
+
+    <p class="text">
+        Представляем Вашему вниманию отзывы о нашей компании. В отличии от других автосалонов мы не пишем сами себе отзывы и не размещаем их на своем сайте под видом настоящих. Все отзывы в данном разделе являются подлинными!
+    </p>
+
+    <ul>
+
+        <li class="review clearfix">
+            <div class="review-images left-column">
+                <img class="review-image-car" src="images/image-review-1.jpg" alt="car"/>
+                <img class="review-image-reviewer" src="images/image-reviewer-1.jpg" alt="reviewer"/>
+            </div>
+            <div class="review-data right-column">
+                <p class="reviewer-name">Иван Абрамов</p>
+                <p class="reviewer-car">BMW M5</p>
+                <div class="date">20.07.2016</div>
+                <p class="text">
+                    Почитал сначала отзывы, с настороженностью приехал к ним, предварительно все посмотрел, задал все вопросы, мне дали почитать договор, на следующий день уже смело приехал на оформление. Претензий не было.
+                </p>
+            </div>
+        </li>
+
+        <li class="review clearfix">
+            <div class="review-images left-column">
+                <img class="review-image-car" src="images/image-review-2.jpg" alt="car"/>
+                <img class="review-image-reviewer" src="images/image-reviewer-2.jpg" alt="reviewer"/>
+            </div>
+            <div class="review-data right-column">
+                <p class="reviewer-name">Андрей Мухин</p>
+                <p class="reviewer-car">LAMBORGINI AVENTADOR</p>
+                <div class="date">20.07.2016</div>
+                <p class="text">
+                    Живу в Колпино, ехать в СПб из-за своей занятости нет возможности, воспользовался услугой вызова оценщика. Оценщик приехал, но по осмотру назвали меньшую сумму, чем я рассчитывал, в итоге не стал им продавать, позже приезжали представители других компаний, после чего я понял, что в этой компании действительно дают больше, чем в других (читал отзывы). В итоге вызвал оценщика второй раз, уже на выкуп. Продавал им авто при условии, что как только будет новый собственник, то вышлют мне договор купли-продажи. Через 3 недели по электронке мне прислали копию договора, а через несколько дней я получил по почте оригинал договора. В моем понимании эта компания выполняет свои обязательства и действительно работает честно, как заявлено у них на сайте.
+                </p>
+            </div>
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="footer">
+
+    <div class="footer-top in-wide">
+
+        <div class="block-content">
+
+            <div class="markello">
+                <p>Разработка сайта</p>
+                <a href="#"></a>
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="#">Выкуп авто</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+
+            <ul class="footer-links">
+                <li><a href="#">Заявка на кредит</a></li>
+                <li><a href="#">Оценка</a></li>
+            </ul>
+
+            <ul class="footer-links">
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Карта сайта</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <div class="block-content clearfix">
+
+            <a href="index.html" class="logo">vykup-avto93<span>.ru</span></a>
+
+            <div class="contact-email">
+
+                <a href="mailto:info@vykup-avto93.ru" class="email">info@vykup-avto93.ru</a>
+
+            </div>
+
+            <div class="contact-address">
+
+                <p>г. Краснодар,</p>
+
+                <p>ул. Старокубанская 40</p>
+
+            </div>
+
+            <div class="contact-phones">
+
+                <a href="tel:+7 967 322 02 02">+7 967 322 02 02</a>
+
+                <a href="tel:+7 967 245 67 31">+7 967 245 67 31</a>
+
+            </div>
+
+            <ul class="social-links">
+                <li><a href="#" class="vk-link"></a></li>
+                <li><a href="#" class="fb-link"></a></li>
+                <li><a href="#" class="tw-link"></a></li>
+                <li><a href="#" class="od-link"></a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/custom-scripts.js"></script>
+</body>
+</html>

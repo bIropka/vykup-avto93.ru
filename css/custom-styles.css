@@ -429,6 +429,7 @@ nav ul .active:before {
     -ms-user-select: none;
     user-select: none;
     cursor: pointer;
+    border: 1px solid #e8e8e8;
 }
 .radio-wrap:before {
     content: '';
@@ -447,6 +448,7 @@ nav ul .active:before {
     bottom: 0;
 }
 .form-radio:checked + .radio-wrap {
+    border: 1px solid #f76d2c;
     background-color: #f76d2c;
     color: #ffffff;
 }
@@ -482,6 +484,7 @@ nav ul .active:before {
     position: absolute;
     left: 2.5%;
     bottom: 15%;
+    border: 1px solid #e8e8e8;
 }
 .kpp-chooser {
     left: 14.5%;
@@ -1119,7 +1122,7 @@ nav ul .active:before {
 ****** contacts page ********
 ******************************/
 .contacts-page {
-    background: none;
+    background: #ffffff none;
 }
 .contacts-page .header {
     margin-bottom: 0;
@@ -1216,6 +1219,118 @@ nav ul .active:before {
 .contacts-block .working-days p span {
     font-family: 'Roboto Light', sans-serif;
     font-size: 14px;
+}
+
+/******************************
+******** review page **********
+******************************/
+.reviews-page {
+    background: #ffffff none;
+}
+.reviews-page .header-nav {
+    border-bottom: 1px solid #e8e8e8;
+}
+.reviews-page .header-breadcrumbs {
+    padding: 15px;
+    margin-bottom: -30px;
+}
+.reviews-page .header-breadcrumbs li, .reviews-page .header-breadcrumbs li a {
+    color: #565656;
+}
+.reviews-page .header-breadcrumbs ul li:after {
+    width: 4px;
+    height: 7px;
+    background: transparent url('../images/sprite-arrows-side.png') no-repeat left center;
+    background-size: cover;
+}
+.reviews-page .form-order {
+    padding-top: 80px;
+}
+.reviews-page .custom-select {
+    bottom: 12%;
+}
+.reviews-page .kpp-chooser {
+    left: 14.5%;
+}
+.reviews {
+    padding-top: 30px;
+}
+.reviews .title {
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 24px;
+    color: #292929;
+    padding-left: 20px;
+    line-height: 1;
+    position: relative;
+    margin-bottom: 10px;
+}
+.reviews .title:before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 100%;
+    background-color: #f76d2c;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.reviews>.text {
+    color: #585858;
+}
+.review {
+    display: block;
+    margin-top: 40px;
+}
+.review-images {
+    width: 265px;
+    position: relative;
+}
+.review-image-reviewer {
+    width: 70px;
+    height: 70px;
+    border: 3px solid #eeeeee;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    position: absolute;
+    top: -10px;
+    right: -35px;
+}
+.review-data {
+    width: 795px;
+}
+.reviewer-name {
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 18px;
+    color: #282828;
+}
+.reviewer-car {
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 18px;
+    color: #f76d2c;
+    margin-bottom: 10px;
+}
+.review .date {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 12px;
+    color: #777777;
+    line-height: 14px;
+}
+.review .date:before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    width: 14px;
+    height: 14px;
+    background: transparent url('../images/icon-date.png') no-repeat center;
+    margin-right: 5px;
+}
+.review .text {
+    font-size: 15px;
+    color: #000000;
+    margin-top: 10px;
 }
 
 /******************************
@@ -1431,6 +1546,9 @@ nav ul .active:before {
     .make-order-page .tagline .title {
         font-size: 28px;
     }
+    .review-data {
+        width: 700px;
+    }
 
 }
 
@@ -1449,6 +1567,9 @@ nav ul .active:before {
     }
     .footer-bottom .logo span {
         font-size: 20px;
+    }
+    .review-data {
+        width: 650px;
     }
 
 }
@@ -1699,6 +1820,15 @@ nav ul .active:before {
     .contacts-block {
         width: 370px;
         margin-top: 80px;
+    }
+    .review-images {
+        float: none;
+        margin: 0;
+    }
+    .review-data {
+        float: none;
+        width: 100%;
+        margin-top: 20px;
     }
 }
 
