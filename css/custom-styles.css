@@ -698,6 +698,7 @@ nav ul .active:before {
 }
 .steps ul {
     margin-top: 20px;
+    counter-reset: li;
 }
 .steps ul li {
     vertical-align: top;
@@ -708,7 +709,8 @@ nav ul .active:before {
     margin-right: 0;
 }
 .steps ul li:before {
-    content: '1';
+    content: counter(li);
+    counter-increment: li;
     display: block;
     width: 20px;
     height: 20px;
@@ -720,12 +722,6 @@ nav ul .active:before {
     font-weight: 600;
     text-align: center;
     margin-bottom: 5px;
-}
-.steps ul li:nth-child(2):before {
-    content: '2';
-}
-.steps ul li:nth-child(3):before {
-    content: '3';
 }
 .steps ul li .title {
     font-family: 'Roboto Medium', sans-serif;
@@ -1224,32 +1220,32 @@ nav ul .active:before {
 /******************************
 ******** review page **********
 ******************************/
-.reviews-page {
+.reviews-page, .article-page {
     background: #ffffff none;
 }
-.reviews-page .header-nav {
+.reviews-page .header-nav, .article-page .header-nav {
     border-bottom: 1px solid #e8e8e8;
 }
-.reviews-page .header-breadcrumbs {
+.reviews-page .header-breadcrumbs,.article-page .header-breadcrumbs {
     padding: 15px;
     margin-bottom: -30px;
 }
-.reviews-page .header-breadcrumbs li, .reviews-page .header-breadcrumbs li a {
+.reviews-page .header-breadcrumbs li, .reviews-page .header-breadcrumbs li a, .article-page .header-breadcrumbs li, .article-page .header-breadcrumbs li a {
     color: #565656;
 }
-.reviews-page .header-breadcrumbs ul li:after {
+.reviews-page .header-breadcrumbs ul li:after, .article-page .header-breadcrumbs ul li:after {
     width: 4px;
     height: 7px;
     background: transparent url('../images/sprite-arrows-side.png') no-repeat left center;
     background-size: cover;
 }
-.reviews-page .form-order {
+.reviews-page .form-order, .article-page .form-order {
     padding-top: 80px;
 }
-.reviews-page .custom-select {
-    bottom: 12%;
+.reviews-page .custom-select, .article-page .custom-select {
+    bottom: 11.75%;
 }
-.reviews-page .kpp-chooser {
+.reviews-page .kpp-chooser, .article-page .kpp-chooser {
     left: 14.5%;
 }
 .reviews {
@@ -1310,7 +1306,7 @@ nav ul .active:before {
     color: #f76d2c;
     margin-bottom: 10px;
 }
-.review .date {
+.review .date, article .date {
     display: inline-block;
     vertical-align: middle;
     font-family: 'Roboto Regular', sans-serif;
@@ -1318,7 +1314,7 @@ nav ul .active:before {
     color: #777777;
     line-height: 14px;
 }
-.review .date:before {
+.review .date:before, article .date:before {
     content: '';
     display: inline-block;
     vertical-align: top;
@@ -1331,6 +1327,92 @@ nav ul .active:before {
     font-size: 15px;
     color: #000000;
     margin-top: 10px;
+}
+
+/******************************
+******** article page **********
+******************************/
+
+.article-page .main-panel {
+    width: 820px;
+}
+article h2 {
+    display: block;
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 24px;
+    color: #292929;
+    line-height: 1;
+    position: relative;
+    padding-left: 20px;
+    font-weight: 100;
+}
+article h2:before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 100%;
+    background-color: #f76d2c;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+article .date {
+    margin: 15px 20px;
+}
+article h3 {
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 16px;
+    color: #343434;
+    font-weight: 100;
+    margin-top: 35px;
+}
+article .text {
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 16px;
+    color: #343434;
+    margin-top: 20px;
+}
+.numbered-list {
+    counter-reset: li;
+}
+.numbered-list li, .usual-list li {
+    display: block;
+    margin-top: 20px;
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 14px;
+    color: #323232;
+    width: 60%;
+    min-width: 250px;
+    padding-left: 25px;
+    position: relative;
+}
+.numbered-list li:before {
+    content: counter(li);
+    counter-increment: li;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #f76d2c;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: 'Open Sans Regular', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 18px;
+    text-align: center;
+}
+.usual-list li {
+    background: transparent url('../images/icon-ok-orange-large.png') no-repeat left top;
+}
+.small-image {
+    display: inline-block;
+    width: 49%;
+    margin-right: 1%;
+    margin-top: 20px;
+}
+.small-image:nth-child(2n) {
+    margin-right: 0;
 }
 
 /******************************
@@ -1549,6 +1631,9 @@ nav ul .active:before {
     .review-data {
         width: 700px;
     }
+    .article-page .main-panel {
+        width: 750px;
+    }
 
 }
 
@@ -1570,6 +1655,9 @@ nav ul .active:before {
     }
     .review-data {
         width: 650px;
+    }
+    .article-page .main-panel {
+        width: 700px;
     }
 
 }
@@ -1830,6 +1918,10 @@ nav ul .active:before {
         width: 100%;
         margin-top: 20px;
     }
+    .article-page .main-panel, .article-page .sidebar {
+        width: 100%;
+        margin-bottom: 40px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2054,6 +2146,13 @@ nav ul .active:before {
     }
     .make-order-page .tagline .title {
         font-size: 18px;
+    }
+    .small-image, .small-image:nth-child(2n) {
+        width: 100%;
+        margin: 20px 0 0 0;
+    }
+    article .usual-list li, article .numbered-list li {
+        width: 80%;
     }
 
 }
