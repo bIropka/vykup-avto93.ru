@@ -493,7 +493,7 @@ nav ul .active:before {
 .kpp-chooser {
     left: 14.5%;
 }
-.custom-select .current-value {
+/*.custom-select .current-value {
     width: 100%;
     height: 100%;
     line-height: 36px;
@@ -542,7 +542,7 @@ nav ul .active:before {
 }
 .custom-select ul li:hover {
     color: #f76d2c;
-}
+}*/
 
 /******************************
 ******** main page ************

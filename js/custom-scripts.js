@@ -43,7 +43,7 @@ $(document).ready(function () {
         $(this).focus();
     });
 
-    $('.custom-select .current-value').click(function() {
+    /*$('.custom-select .current-value').click(function() {
         if ($(this).hasClass('active')) {
             $('.custom-select .current-value').removeClass('active');
             $('.custom-select ul').slideUp();
@@ -54,15 +54,15 @@ $(document).ready(function () {
             $(this).next().slideToggle();
         }
 
-    });
+    });*/
 
-    $('.custom-select ul li').click(function() {
+    /*$('.custom-select ul li').click(function() {
         $(this).parent().slideUp();
         $(this).parent().siblings('.current-value').removeClass('active');
         var value = $(this).html();
         $(this).parent().siblings('.current-value').html(value);
         $(this).parent().next().find('input').val(value);
-    });
+    });*/
 
     $('.mobile-contacts').click(function() {
         $(this).toggleClass('active');
